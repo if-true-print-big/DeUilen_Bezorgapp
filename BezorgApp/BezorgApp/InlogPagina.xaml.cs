@@ -7,4 +7,6 @@ public partial class InlogPagina : ContentPage
 		InitializeComponent();
 
     }
+
+    
 }
