@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BezorgApp.ScannerPagina"
-             Title="ScannerPagina">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="ScannerPagina"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+
+    <zxing:CameraBarcodeReaderView
+          x:Name="cameraBarcodeReaderView"
+          IsDetecting="True"
+          BarcodesDetected="BarcodesDetected" />
+    
 </ContentPage>
