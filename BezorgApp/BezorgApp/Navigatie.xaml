@@ -7,7 +7,12 @@
 >
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Navigatie"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image 
+            Source="google_maps.jpg"
+            HeightRequest="600"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
