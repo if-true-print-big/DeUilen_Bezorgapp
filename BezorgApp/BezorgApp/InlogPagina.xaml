@@ -11,6 +11,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0"
                 Stroke="#ccc"
@@ -45,7 +46,11 @@
                    PlaceholderColor="#888"
                    FontSize="16" />
         </Border>
-        <Button Grid.Row="5"
+        <Label Grid.Row="5"
+               Text="Wachtwoord vergeten?"
+               TextDecorations="Underline"
+               TextColor="Blue"/>
+        <Button Grid.Row="6"
             Text="Inloggen"
                 x:Name="InlogKnop"
                 IsEnabled="False"/>

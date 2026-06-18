@@ -7,7 +7,6 @@ public partial class InlogPagina : ContentPage
         InitializeComponent();
     }
 
-
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
     {
         bool veldenGevuld =
@@ -17,4 +16,4 @@ public partial class InlogPagina : ContentPage
         InlogKnop.IsEnabled = veldenGevuld;
     }
 
-}
+} 
