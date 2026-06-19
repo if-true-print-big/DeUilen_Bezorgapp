@@ -1,24 +1,24 @@
-﻿namespace BezorgApp
+﻿namespace BezorgApp;
+
+public partial class MainPage : ContentPage
 {
-	public partial class MainPage : ContentPage
-	{
-		int count = 0;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+    private void HomeTapped(object sender, TappedEventArgs e)
+    {
+        DisplayAlertAsync("ok","ok","123");
+        // Home page
+    }
 
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+    private void KaartTapped(object sender, TappedEventArgs e)
+    {
+        // Kaart page
+    }
 
-		private void OnCounterClicked(object? sender, EventArgs e)
-		{
-			count++;
-
-			if (count == 1)
-				CounterBtn.Text = $"Clicked {count} time";
-			else
-				CounterBtn.Text = $"Clicked {count} times";
-
-			SemanticScreenReader.Announce(CounterBtn.Text);
-		}
-	}
+    private void AdressenTapped(object sender, TappedEventArgs e)
+    {
+        // Adressen page
+    }
 }
