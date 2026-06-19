@@ -77,8 +77,22 @@
                         HeightRequest="60"
                         BackgroundColor="MediumSeaGreen"
                         FontSize="18"/>
+                
+                <Button Text="Foto maken"
+                        Clicked="MaakFoto_Clicked"/>
+
+                <Button Text="Foto kiezen"
+                        Clicked="KiesFoto_Clicked"/>
+
+                <Button Text="Bestand kiezen"
+                        Clicked="KiesBestand_Clicked"/>
+
+                <Image x:Name="FotoPreview"
+                       HeightRequest="200"
+                       WidthRequest="200"/>
             </VerticalStackLayout>
         </ScrollView>
+        
 
         <!-- Onderste navigatie -->
         <Grid Grid.Row="1"
