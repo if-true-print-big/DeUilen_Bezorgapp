@@ -1,24 +1,69 @@
-﻿namespace BezorgApp
+﻿namespace BezorgApp;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Media;
+public partial class MainPage : ContentPage
 {
-	public partial class MainPage : ContentPage
-	{
-		int count = 0;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+    private void HomeTapped(object sender, TappedEventArgs e)
+    {
+        DisplayAlertAsync("ok","ok","123");
+        // Home page
+    }
 
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+    private void KaartTapped(object sender, TappedEventArgs e)
+    {
+        // Kaart page
+    }
 
-		private void OnCounterClicked(object? sender, EventArgs e)
-		{
-			count++;
+    private void AdressenTapped(object sender, TappedEventArgs e)
+    {
+        // Adressen page
+    }
+    
 
-			if (count == 1)
-				CounterBtn.Text = $"Clicked {count} time";
-			else
-				CounterBtn.Text = $"Clicked {count} times";
+    private async void MaakFoto_Clicked(object sender, EventArgs e)
+    {
+        if (MediaPicker.Default.IsCaptureSupported)
+        {
+            FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
 
-			SemanticScreenReader.Announce(CounterBtn.Text);
-		}
-	}
+            if (photo != null)
+            {
+                var stream = await photo.OpenReadAsync();
+                await DisplayAlertAsync("Succes",
+                    $"Foto gemaakt: {photo.FileName}",
+                    "OK");
+                FotoPreview.Source = ImageSource.FromStream(() => stream);
+            }
+        }
+    }
+    private async void KiesFoto_Clicked(object sender, EventArgs e)
+    {
+        FileResult photo = await MediaPicker.Default.PickPhotoAsync();
+
+        if (photo != null)
+        {
+            var stream = await photo.OpenReadAsync();
+            await DisplayAlertAsync("Succes",
+                    $"Foto gekozen: {photo.FileName}",
+                    "OK");
+            FotoPreview.Source = ImageSource.FromStream(() => stream);
+        }
+    }
+    
+
+    private async void KiesBestand_Clicked(object sender, EventArgs e)
+    {
+        FileResult file = await FilePicker.Default.PickAsync();
+
+        if (file != null)
+        {
+            await DisplayAlertAsync("Bestand gekozen",
+                file.FileName,
+                "OK");
+        }
+    }
 }

@@ -8,6 +8,7 @@
 
     <ShellContent
         Title="Home"
+        Shell.BackgroundColor="FloralWhite"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
