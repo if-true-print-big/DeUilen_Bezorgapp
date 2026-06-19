@@ -78,14 +78,13 @@
                         BackgroundColor="MediumSeaGreen"
                         FontSize="18"/>
                 
-                <Button Text="Foto maken"
+                <Button BackgroundColor="SaddleBrown"
+                        Text="Foto maken"
                         Clicked="MaakFoto_Clicked"/>
 
-                <Button Text="Foto kiezen"
+                <Button BackgroundColor="CornflowerBlue"
+                        Text="Foto kiezen"
                         Clicked="KiesFoto_Clicked"/>
-
-                <Button Text="Bestand kiezen"
-                        Clicked="KiesBestand_Clicked"/>
 
                 <Image x:Name="FotoPreview"
                        HeightRequest="200"
