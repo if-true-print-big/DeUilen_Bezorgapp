@@ -16,5 +16,10 @@
             HeightRequest="600"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+		<Button
+            Text="Pakketjes"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="PackagesClicked"/>
+	</VerticalStackLayout>
 </ContentPage>

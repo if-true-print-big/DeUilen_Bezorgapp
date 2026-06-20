@@ -6,4 +6,9 @@ public partial class Navigatie : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void PackagesClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new PackagesEnRoute());
+	}
 }
