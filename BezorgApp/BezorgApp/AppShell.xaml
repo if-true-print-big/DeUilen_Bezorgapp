@@ -11,5 +11,13 @@
         Shell.BackgroundColor="FloralWhite"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="InlogPagina"
+        ContentTemplate="{DataTemplate local:InlogPagina}"
+        Route="InlogPagina" />
+    <ShellContent
+        Title="ScannerPagina"
+        ContentTemplate="{DataTemplate local:ScannerPagina}"
+        Route="ScannerPagina" />
 
 </Shell>

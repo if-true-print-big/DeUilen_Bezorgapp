@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BezorgApp.InlogPagina"
+             Title="InlogPagina">
+    <Grid RowSpacing="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                Stroke="#ccc"
+                StrokeThickness="1"
+                Padding="5"
+                Margin="0,0,0,20">
+            <Label Text="Inloggen:"/>
+        </Border>
+        <Label Grid.Row="1"
+               Text="Gebruikersnaam:"/>
+        <Border Grid.Row="2"
+                Stroke="Black"
+                StrokeThickness="1"
+                Padding="5">
+            <Entry Placeholder=""
+               TextChanged="Input_TextChanged"
+               x:Name="GebruikersnaamEntry"
+               TextColor="Black"
+               PlaceholderColor="#888"
+               FontSize="16" />
+        </Border>
+        <Label Grid.Row="3"
+               Text="Wachtwoord:"/>
+        <Border Grid.Row="4"
+                Stroke="Black"
+                StrokeThickness="1"
+                Padding="5">
+            <Entry x:Name="WachtwoordEntry"
+                   TextChanged="Input_TextChanged"
+                   Placeholder=""
+                   TextColor="Black"
+                   PlaceholderColor="#888"
+                   FontSize="16" />
+        </Border>
+        <Label Grid.Row="5"
+               Text="Wachtwoord vergeten?"
+               TextDecorations="Underline"
+               TextColor="Blue"/>
+        <Button Grid.Row="6"
+            Text="Inloggen"
+                x:Name="InlogKnop"
+                IsEnabled="False"/>
+    </Grid>
+</ContentPage>
