@@ -1,7 +1,3 @@
-using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-using JetBrains.Annotations;
-
 namespace BezorgApp;
 
 public partial class PackagesWarehouse : ContentPage
