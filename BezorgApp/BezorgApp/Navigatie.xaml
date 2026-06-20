@@ -4,6 +4,7 @@
              
              x:Class="BezorgApp.Navigatie"
              Title="Navigatie"
+             Background="FloralWhite"
 >
     <VerticalStackLayout>
         <Label 

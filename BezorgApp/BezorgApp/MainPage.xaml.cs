@@ -13,15 +13,15 @@ public partial class MainPage : ContentPage
         // Home page
     }
 
-	private void StartClicked(object sender, TappedEventArgs e)
+	private async void StartClicked(object sender, EventArgs e)
 	{
-		//
+		await Navigation.PushAsync(new PackagesWarehouse());
 	}
 
-	private void KaartTapped(object sender, TappedEventArgs e)
+	private async void KaartTapped(object sender, EventArgs e)
     {
-        // Kaart page
-    }
+		await Navigation.PushAsync(new Navigatie());
+	}
 
     private void AdressenTapped(object sender, TappedEventArgs e)
     {
