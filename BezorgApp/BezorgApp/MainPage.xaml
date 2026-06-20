@@ -76,7 +76,8 @@
                 <Button Text="Starten met bezorgen"
                         HeightRequest="60"
                         BackgroundColor="MediumSeaGreen"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="StartClicked"/>
                 
                 <Button BackgroundColor="SaddleBrown"
                         Text="Foto maken"

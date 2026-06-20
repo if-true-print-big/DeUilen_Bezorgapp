@@ -13,7 +13,12 @@ public partial class MainPage : ContentPage
         // Home page
     }
 
-    private void KaartTapped(object sender, TappedEventArgs e)
+	private void StartClicked(object sender, TappedEventArgs e)
+	{
+		//
+	}
+
+	private void KaartTapped(object sender, TappedEventArgs e)
     {
         // Kaart page
     }

@@ -78,6 +78,9 @@
 	  <MauiXaml Update="Navigatie.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="PackagesWarehouse.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ScannerPagina.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
