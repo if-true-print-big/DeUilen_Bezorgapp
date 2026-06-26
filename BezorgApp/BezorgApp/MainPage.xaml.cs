@@ -23,9 +23,9 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(new Navigatie());
 	}
 
-    private void AdressenTapped(object sender, TappedEventArgs e)
+    private async void AdressenTapped(object sender, EventArgs e)
     {
-        // Adressen page
+        await Navigation.PushAsync(new Adressen());
     }
     
 
