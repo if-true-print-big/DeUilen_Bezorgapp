@@ -6,24 +6,54 @@
     <VerticalStackLayout Padding="16" Spacing="0">
 
         <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 1, 1234AB, Heerlen" Padding="12,10" BackgroundColor="White"/>
+        <Grid ColumnDefinitions="*,1,*" BackgroundColor="White" Padding="0,10">
+            <Label Grid.Column="0" Text="Te doen (5)" HorizontalTextAlignment="Center"/>
+            <BoxView Grid.Column="1" WidthRequest="1" Color="#E0E0E0" VerticalOptions="Fill"/>
+            <Label Grid.Column="2" Text="Klaar (23)" HorizontalTextAlignment="Center"/>
+        </Grid>
 
         <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 2, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+        <Border StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAdres1Tapped"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Kerkstraat 1, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+                <Label Text="📦4x     ✒️ ja     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
+            </VerticalStackLayout>
+        </Border>
 
         <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 3, 1234AB, Heerlen" Padding="12,10" BackgroundColor="White"/>
+        <Border StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAdres2Tapped"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Kerkstraat 2, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+                <Label Text="📦1x     ✒️ nee     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
+            </VerticalStackLayout>
+        </Border>
 
         <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 4, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+        <Border StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAdres3Tapped"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Kerkstraat 3, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+                <Label Text="📦3x     ✒️ nee     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
+            </VerticalStackLayout>
+        </Border>
 
         <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 5, 1234AB, Heerlen" Padding="12,10" BackgroundColor="White"/>
-
-        <BoxView HeightRequest="1" Color="#E0E0E0"/>
-        <Label Text="Kerkstraat 6, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
-
-        <BoxView HeightRequest="1" Color="#E0E0E0"/>
-
+        <Border StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAdres4Tapped"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Kerkstraat 4, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
+                <Label Text="📦2x     ✒️ ja     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
+            </VerticalStackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
