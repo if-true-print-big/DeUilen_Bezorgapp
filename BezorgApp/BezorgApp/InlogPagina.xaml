@@ -46,14 +46,16 @@
                    PlaceholderColor="#888"
                    FontSize="16" />
         </Border>
-        <Label Grid.Row="5"
-               Text="Wachtwoord vergeten?"
-               TextDecorations="Underline"
-               TextColor="Blue"/>
+        
         <Button Grid.Row="6"
             Text="Inloggen"
                 x:Name="InlogKnop"
                 IsEnabled="False"
                 Clicked="InlogClicked"/>
+        <Label Grid.Row="5"
+       Text="Wachtwoord vergeten?"
+       TextDecorations="Underline"
+       TextColor="Blue"/>
+        
     </Grid>
 </ContentPage>
