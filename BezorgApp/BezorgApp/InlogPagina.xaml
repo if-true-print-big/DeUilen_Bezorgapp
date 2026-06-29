@@ -47,12 +47,13 @@
                    FontSize="16" />
         </Border>
         
-        <Button Grid.Row="6"
+        <Button Grid.Row="5"
             Text="Inloggen"
                 x:Name="InlogKnop"
                 IsEnabled="False"
                 Clicked="InlogClicked"/>
-        <Label Grid.Row="5"
+
+        <Label Grid.Row="6"
        Text="Wachtwoord vergeten?"
        TextDecorations="Underline"
        TextColor="Blue"/>
