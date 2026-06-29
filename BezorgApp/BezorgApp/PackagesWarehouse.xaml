@@ -42,7 +42,7 @@
 				<Label Text="01 10cm/5cm/20cm" Margin="5,15,0,0" FontSize="Micro"/>
 				<Button Text=">" Grid.Column="1" Margin="5,2" FontSize="Micro"/>
                 <CheckBox Grid.Column="2" IsChecked="False"/>
-				<Label Text="04 30cm/40cm/10/cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
+				<Label Text="02 30cm/40cm/10/cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
 				<Button Text=">" Grid.Row="1" Grid.Column="1"  FontSize="Micro" Margin="5,2"/>
                 <CheckBox Grid.Row="1" Grid.Column="2" IsChecked="False"/>
 			</Grid>

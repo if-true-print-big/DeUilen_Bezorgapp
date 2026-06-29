@@ -74,7 +74,7 @@
                 </Border>
 
                 <!-- Hoofd knop -->
-                <Button Text="Starten met bezorgen"
+                <Button Text="Starten met inladen"
                         HeightRequest="60"
                         BackgroundColor="MediumSeaGreen"
                         FontSize="18"
