@@ -74,24 +74,12 @@
                 </Border>
 
                 <!-- Hoofd knop -->
-                <Button Text="Starten met inladen"
+				<Button Text="Starten met inladen"
                         HeightRequest="60"
                         BackgroundColor="MediumSeaGreen"
                         FontSize="18"
                         Clicked="StartClicked"/>
-                
-                <Button BackgroundColor="SaddleBrown"
-                        Text="Foto maken"
-                        Clicked="MaakFoto_Clicked"/>
-
-                <Button BackgroundColor="CornflowerBlue"
-                        Text="Foto kiezen"
-                        Clicked="KiesFoto_Clicked"/>
-
-                <Image x:Name="FotoPreview"
-                       HeightRequest="200"
-                       WidthRequest="200"/>
-            </VerticalStackLayout>
+			</VerticalStackLayout>
         </ScrollView>
         
 

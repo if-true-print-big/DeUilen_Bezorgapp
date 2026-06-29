@@ -50,7 +50,19 @@
 					<Button Text="🗺️ Terug naar Kaart" Grid.Row="6" BackgroundColor="ForestGreen" Clicked="MapClicked"/>
                     <Button Text="Scannen" Grid.Row="8" Clicked="ScanClicked"/>
                 </Grid>
-            </VerticalStackLayout>
+
+				<Button BackgroundColor="SaddleBrown"
+                        Text="Foto maken"
+                        Clicked="MaakFoto_Clicked"/>
+
+				<Button BackgroundColor="CornflowerBlue"
+                        Text="Foto kiezen"
+                        Clicked="KiesFoto_Clicked"/>
+
+				<Image x:Name="FotoPreview"
+                       HeightRequest="200"
+                       WidthRequest="200"/>
+			</VerticalStackLayout>
         </ScrollView>
     <!-- Onderste navigatie -->
     <Grid Grid.Row="1"
