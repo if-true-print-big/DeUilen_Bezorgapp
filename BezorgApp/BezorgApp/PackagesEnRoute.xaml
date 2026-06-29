@@ -2,62 +2,108 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BezorgApp.PackagesEnRoute"
+             BackgroundColor="FloralWhite"
              Title="PackagesEnRoute">
-	<Grid Margin="20,0">
-		<Grid.RowDefinitions>
+    <Grid RowDefinitions="*,Auto">
 
-			<RowDefinition Height="30"/>
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="15">
 
-			<RowDefinition Height="15"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="15"/>
+                <Grid Margin="20,0">
+                    <Grid.RowDefinitions>
 
-			<RowDefinition Height="30"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="30"/>
-			<RowDefinition Height="60"/>
-			<RowDefinition Height="10"/>
-			<RowDefinition Height="60"/>
-		</Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
 
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="15"/>
 
-
-		<Label Text="Kerkstraat 1 Heerlen" Padding="0,10,0,0"/>
-
-		<Border Grid.Row="2">
-			<Grid ColumnDefinitions="70*, 10*, 30*">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="50"/>
-				</Grid.RowDefinitions>
+						<RowDefinition Height="30"/>
+						<RowDefinition Height="30"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
 
 
-				<Label Text="01 100cm/10cm/5cm" Margin="5,15,0,0" FontSize="Micro"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Margin="5,15,0,0"/>
-				<Button Text=">" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
-			</Grid>
-		</Border>
+
+                    <Label Text="Kerkstraat 1 Heerlen" Padding="0,10,0,0"/>
+
+					<Border Grid.Row="2">
+						<Grid ColumnDefinitions="60*, 20*, 20*">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="50"/>
+								<RowDefinition Height="50"/>
+							</Grid.RowDefinitions>
 
 
-		<Label Text="Hoofdstraat 4 Heerlen" Grid.Row="4"/>
+							<Label Text="01 10cm/5cm/20cm" Margin="5,15,0,0" FontSize="Micro"/>
+							<Button Text=">" Grid.Column="1" Margin="5,2" FontSize="Micro"/>
+							<CheckBox Grid.Column="2" IsChecked="False"/>
 
-		<Border Grid.Row="5">
-			<Grid ColumnDefinitions="70*, 10*, 30*">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="50"/>
-					<RowDefinition Height="50"/>
+							<Label Text="02 30cm/40cm/10/cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
+							<Button Text=">" Grid.Row="1" Grid.Column="1"  FontSize="Micro" Margin="5,2"/>
+							<CheckBox Grid.Row="1" Grid.Column="2" IsChecked="False"/>
+						</Grid>
+					</Border>
 
-				</Grid.RowDefinitions>
+					<Button Text="🗺️ Terug naar Kaart" Grid.Row="6" BackgroundColor="ForestGreen" Clicked="MapClicked"/>
+                    <Button Text="Scannen" Grid.Row="8" Clicked="ScanClicked"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    <!-- Onderste navigatie -->
+    <Grid Grid.Row="1"
+                BackgroundColor="LightSlateGrey"
+                Padding="10"
+                ColumnDefinitions="*,*,*">
 
-				<Label Text="02 10cm/15cm/20cm" Margin="5,15,0,0" FontSize="Micro"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Margin="5,15,0,0"/>
-				<Button Text=">" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
-				<Label Text="03 15cm/15cm/10cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Grid.Row="2" Margin="5,15,0,0"/>
-				<Button Text=">" Grid.Row="1" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
-			</Grid>
-		</Border>
+        <Border Grid.Column="0" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="HomeTapped"/>
+            </Border.GestureRecognizers>
 
-		<Button Text="🗺️ Terug naar Kaart" Grid.Row="7" WidthRequest="200" BackgroundColor="ForestGreen" Clicked="MapClicked"/>
-		<Button Text="Scannen" Grid.Row="9" Clicked="ScanClicked"/>
-	</Grid>
+            <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="HomeTapped" NumberOfTapsRequired="1"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="🏠"
+                           HorizontalOptions="Center"
+                           FontSize="24"/>
+                <Label Text="Home"
+                             HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="1" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="KaartTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="🗺️"
+                   HorizontalOptions="Center"
+                   FontSize="24"/>
+                <Label Text="Kaart"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="2" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AdressenTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="📦"
+               HorizontalOptions="Center"
+               FontSize="24"/>
+                <Label Text="Adressen"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
+
+    </Grid>
 </ContentPage>

@@ -4,8 +4,12 @@
              x:Class="BezorgApp.PackagesWarehouse"
              Title="PackagesWarehouse"
 			 BackgroundColor="FloralWhite">
-		
-	<Grid Margin="20,0">
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                
+                <Grid Margin="20,0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30"/>
 
@@ -19,6 +23,8 @@
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="30"/>
 			<RowDefinition Height="60"/>
+            <RowDefinition Height="30"/>
+			<RowDefinition Height="60"/>
 		</Grid.RowDefinitions>
 
 
@@ -27,16 +33,18 @@
 		<Label Text="Rek 1" Grid.Row="1" Padding="0,10,0,0"/>
 
 		<Border Grid.Row="3">
-			<Grid ColumnDefinitions="70*, 10*, 30*">
+			<Grid ColumnDefinitions="60*, 20*, 20*">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
 				</Grid.RowDefinitions>
 
-
-				<Label Text="01 Adres: Kerkstraat 1 Heerlen" Margin="5,15,0,0" FontSize="Micro"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Margin="5,15,0,0"/>
-				<Button Text=">" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
-				<BoxView HeightRequest="1" Margin="5,15,0,0"/>
+				<Label Text="01 10cm/5cm/20cm" Margin="5,15,0,0" FontSize="Micro"/>
+				<Button Text=">" Grid.Column="1" Margin="5,2" FontSize="Micro"/>
+                <CheckBox Grid.Column="2" IsChecked="False"/>
+				<Label Text="02 30cm/40cm/10/cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
+				<Button Text=">" Grid.Row="1" Grid.Column="1"  FontSize="Micro" Margin="5,2"/>
+                <CheckBox Grid.Row="1" Grid.Column="2" IsChecked="False"/>
 			</Grid>
 		</Border>
 
@@ -44,21 +52,19 @@
 		<Label Text="Rek 2" Grid.Row="5"/>
 
 		<Border Grid.Row="6">
-			<Grid ColumnDefinitions="70*, 10*, 30*">
+			<Grid ColumnDefinitions="60*, 20*, 20*">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
 					<RowDefinition Height="50"/>
 
 				</Grid.RowDefinitions>
 
-				<Label Text="02 Adres: Kerkstraat 4 Heerlen" Margin="5,15,0,0" FontSize="Micro"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Margin="5,15,0,0"/>
-				<BoxView HeightRequest="1" Margin="5,15,0,0"/>
-				<Button Text=">" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
-				<Label Text="03 Adres: Kerkstraat 4 Heerlen" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
-				<Label Text="📦" FontSize="Micro" Grid.Column="1" Grid.Row="2" Margin="5,15,0,0"/>
-				<BoxView HeightRequest="1" Margin="5,15,0,0" Grid.Row="2"/>
-				<Button Text=">" Grid.Row="1" Grid.Column="2" Margin="20,5" FontSize="Micro"/>
+				<Label Text="03 20cm/30/cm/5cm" Margin="5,15,0,0" FontSize="Micro"/>
+				<Button Text=">" Grid.Column="1" FontSize="Micro" Margin="5,2"/>
+                <CheckBox Grid.Column="2" IsChecked="False"/>
+				<Label Text="04 30cm/40cm/10/cm" Margin="5,15,0,0" FontSize="Micro" Grid.Row="2"/>
+				<Button Text=">" Grid.Row="1" Grid.Column="1"  FontSize="Micro" Margin="5,2"/>
+                <CheckBox Grid.Row="1" Grid.Column="2" IsChecked="False"/>
 			</Grid>
 		</Border>
 
@@ -66,5 +72,67 @@
 		Text="Scannen" 
 		Grid.Row="8"
 		Clicked="ScannerPage"/>
+
+        <Button 
+        Text="Route starten -->" 
+        Grid.Row="10"
+        BackgroundColor="MediumSeaGreen"
+        Clicked="KaartTapped"/>
 	</Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+    <!-- Onderste navigatie -->
+    <Grid Grid.Row="1"
+                BackgroundColor="LightSlateGrey"
+                Padding="10"
+                ColumnDefinitions="*,*,*">
+
+        <Border Grid.Column="0" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="HomeTapped"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="HomeTapped" NumberOfTapsRequired="1"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="🏠"
+                           HorizontalOptions="Center"
+                           FontSize="24"/>
+                <Label Text="Home"
+                             HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="1" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="KaartTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="🗺️"
+                   HorizontalOptions="Center"
+                   FontSize="24"/>
+                <Label Text="Kaart"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="2" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AdressenTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="📦"
+               HorizontalOptions="Center"
+               FontSize="24"/>
+                <Label Text="Adressen"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
+
+    </Grid>
 </ContentPage>

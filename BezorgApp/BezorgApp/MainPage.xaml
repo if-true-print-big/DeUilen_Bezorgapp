@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BezorgApp.MainPage"
-             BackgroundColor="AntiqueWhite">
+             BackgroundColor="FloralWhite">
 
     <Grid RowDefinitions="*,Auto">
 
@@ -45,15 +45,16 @@
                                FontAttributes="Bold"/>
 
                             <Label Text="12 Adressen"
-                               FontSize="30"
-                               FontAttributes="Bold"/>
-
-                            <Label Text="🕒 Starttijd: 08:30"
-                               FontSize="25"/>
+                                   FontSize="30"
+                                   FontAttributes="Bold"/>
+                        <Label Text="🚚 Bus locatie: P4"
+                                       FontSize="25"/>
+                        <Label Text="🕒 Starttijd: 08:30"
+                                           FontSize="25"/>
                             <Label Text="🏁 Eindtijd (verwacht): 16:45" 
-                               FontSize="25"/>
+                                           FontSize="25"/>  
 
-                            <BoxView HeightRequest="180"
+                        <BoxView HeightRequest="180"
                                  Color="Ivory" />
 
                         </VerticalStackLayout>
@@ -73,7 +74,7 @@
                 </Border>
 
                 <!-- Hoofd knop -->
-                <Button Text="Starten met bezorgen"
+                <Button Text="Starten met inladen"
                         HeightRequest="60"
                         BackgroundColor="MediumSeaGreen"
                         FontSize="18"

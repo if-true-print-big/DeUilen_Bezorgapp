@@ -7,18 +7,19 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-    private void HomeTapped(object sender, TappedEventArgs e)
-    {
-        DisplayAlertAsync("ok","ok","123");
-        // Home page
-    }
+    
 
 	private async void StartClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new PackagesWarehouse());
 	}
 
-	private async void KaartTapped(object sender, EventArgs e)
+    private async void HomeTapped(object sender, TappedEventArgs e)
+    {
+        // Staat al op home
+    }
+
+    private async void KaartTapped(object sender, EventArgs e)
     {
 		await Navigation.PushAsync(new Navigatie());
 	}
