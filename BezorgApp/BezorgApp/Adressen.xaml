@@ -19,7 +19,7 @@
             </Border.GestureRecognizers>
             <VerticalStackLayout>
                 <Label Text="Kerkstraat 1, 1234AB, Heerlen" Padding="12,10" BackgroundColor="#F5F5F5"/>
-                <Label Text="📦4x     ✒️ ja     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
+                <Label Text="📦2x     ✒️ ja     🕒10:00 - 17:00   >" Padding="12,10" BackgroundColor="White"/>
             </VerticalStackLayout>
         </Border>
 
