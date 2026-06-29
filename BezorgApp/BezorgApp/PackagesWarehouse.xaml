@@ -4,8 +4,12 @@
              x:Class="BezorgApp.PackagesWarehouse"
              Title="PackagesWarehouse"
 			 BackgroundColor="FloralWhite">
-		
-	<Grid Margin="20,0">
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                
+                <Grid Margin="20,0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30"/>
 
@@ -67,4 +71,60 @@
 		Grid.Row="8"
 		Clicked="ScannerPage"/>
 	</Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+    <!-- Onderste navigatie -->
+    <Grid Grid.Row="1"
+                BackgroundColor="LightSlateGrey"
+                Padding="10"
+                ColumnDefinitions="*,*,*">
+
+        <Border Grid.Column="0" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="HomeTapped"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="HomeTapped" NumberOfTapsRequired="1"/>
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="🏠"
+                           HorizontalOptions="Center"
+                           FontSize="24"/>
+                <Label Text="Home"
+                             HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="1" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="KaartTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="🗺️"
+                   HorizontalOptions="Center"
+                   FontSize="24"/>
+                <Label Text="Kaart"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Column="2" StrokeThickness="0">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AdressenTapped" NumberOfTapsRequired="1"/>
+            </Border.GestureRecognizers>
+
+            <VerticalStackLayout Spacing="0">
+                <Label Text="📦"
+               HorizontalOptions="Center"
+               FontSize="24"/>
+                <Label Text="Adressen"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
+
+    </Grid>
 </ContentPage>
