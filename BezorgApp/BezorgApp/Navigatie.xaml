@@ -22,7 +22,8 @@
                 HeightRequest="600"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-                    <Button
+				<Label x:Name="locationlabel" Text=""/>
+					<Button
                 Text="Pakketjes"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"

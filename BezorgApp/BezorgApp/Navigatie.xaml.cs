@@ -5,6 +5,7 @@ public partial class Navigatie : ContentPage
 	public Navigatie()
 	{
 		InitializeComponent();
+		GetLocation();
 	}
 
 	private async void PackagesClicked(object sender, EventArgs e)
@@ -26,4 +27,16 @@ public partial class Navigatie : ContentPage
     {
 
     }
+
+	private async void GetLocation()
+	{
+		GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+		Location location = await Geolocation.Default.GetLocationAsync(request);
+		string coordinates = "";
+		coordinates += "Breedtegraad ";
+		coordinates += location.Latitude.ToString();
+		coordinates += " Lengtegraad ";
+		coordinates += location.Longitude.ToString();
+		locationlabel.Text = coordinates;
+	}
 }
