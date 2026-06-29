@@ -5,16 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BezorgApp"
     Title="BezorgApp">
-
+    
     <ShellContent
         Title="Home"
-        Shell.BackgroundColor="FloralWhite"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-    <ShellContent
-        Title="InlogPagina"
-        ContentTemplate="{DataTemplate local:InlogPagina}"
-        Route="InlogPagina" />
-
-
+    
 </Shell>
