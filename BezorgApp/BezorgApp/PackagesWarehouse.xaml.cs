@@ -26,4 +26,9 @@ public partial class PackagesWarehouse : ContentPage
     {
 		await Navigation.PushAsync(new Adressen());
 	}
+
+	private async void ToOnePackageDemo(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new OnePackageDemo());
+	}
 }

@@ -9,7 +9,7 @@ public partial class PackagesEnRoute : ContentPage
 
 	private async void MapClicked(object sender, EventArgs e)
 	{
-		await Navigation.PopAsync();
+		await Navigation.PushAsync(new Navigatie());
 	}
 
 	private async void ScanClicked(object sender, EventArgs e)
@@ -30,6 +30,11 @@ public partial class PackagesEnRoute : ContentPage
     private async void AdressenTapped(object sender, TappedEventArgs e)
     {
 		await Navigation.PushAsync(new Adressen());
+	}
+
+	private async void ToOnePackageDemo(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new OnePackageDemo());
 	}
 
 	private async void MaakFoto_Clicked(object sender, EventArgs e)

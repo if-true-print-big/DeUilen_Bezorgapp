@@ -23,10 +23,10 @@ public partial class Navigatie : ContentPage
         // Staat al op navigatie
     }
 
-    private void AdressenTapped(object sender, TappedEventArgs e)
+    private async void AdressenTapped(object sender, TappedEventArgs e)
     {
-
-    }
+		await Navigation.PushAsync(new Adressen());
+	}
 
 	private async void GetLocation()
 	{

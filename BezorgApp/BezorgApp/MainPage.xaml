@@ -49,7 +49,9 @@
                                    FontAttributes="Bold"/>
                         <Label Text="🚚 Bus locatie: P4"
                                        FontSize="25"/>
-                        <Label Text="🕒 Starttijd: 08:30"
+						<Label Text="Poort: 5"
+                                       FontSize="25"/>
+						<Label Text="🕒 Starttijd: 08:30"
                                            FontSize="25"/>
                             <Label Text="🏁 Eindtijd (verwacht): 16:45" 
                                            FontSize="25"/>  
