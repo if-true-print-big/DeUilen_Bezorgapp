@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BezorgApp.InlogPagina"
              Title="InlogPagina">
-    <Grid RowSpacing="15" Padding="5,0">
+    <Grid RowSpacing="15" Padding="10,20,10,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -13,13 +13,9 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0"
-                Stroke="#ccc"
-                StrokeThickness="1"
-                Padding="5"
-                Margin="0,0,0,20">
-            <Label Text="Inloggen:"/>
-        </Border>
+
+        <Label Text="Inloggen:" FontSize="40" Grid.Row="0"/>
+
         <Label Grid.Row="1"
                Text="Gebruikersnaam:"/>
         <Border Grid.Row="2"
