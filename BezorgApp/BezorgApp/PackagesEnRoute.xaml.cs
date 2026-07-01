@@ -79,4 +79,8 @@ public partial class PackagesEnRoute : ContentPage
 				"OK");
 		}
 	}
+	private async void ToOnePackage(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new OnePackage());
+	}
 }

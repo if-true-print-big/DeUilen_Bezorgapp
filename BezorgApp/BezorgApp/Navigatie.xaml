@@ -24,7 +24,7 @@
                 HorizontalOptions="Center" />
 				<Label x:Name="locationlabel" Text=""/>
 					<Button
-                Text="Pakketjes"
+                Text="Bezorgen"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Clicked="PackagesClicked"/>

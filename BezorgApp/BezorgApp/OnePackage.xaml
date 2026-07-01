@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BezorgApp.OnePackage"
+             Title="OnePackage"
+			 BackgroundColor="FloralWhite">
+
+	<Grid RowDefinitions="*, auto">
+		<ScrollView Grid.Row="0">
+			<VerticalStackLayout Padding="20" Spacing="15">
+				
+				<Border StrokeThickness="5" Stroke="Black">
+					<Label Text="01" FontSize="100" HorizontalTextAlignment="Center"/>
+				</Border>
+				<Label Text="Kerkstraat 1, Heerlen" FontSize="Large" HorizontalTextAlignment="Center"/>
+
+				<Border>
+					<Grid  ColumnDefinitions="75*, 25*">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="22"/>
+							<RowDefinition Height="22"/>
+							<RowDefinition Height="22"/>
+							<RowDefinition Height="22"/>
+							<RowDefinition Height="22"/>
+						</Grid.RowDefinitions>
+						<Label Text="Kan door brievenbus" FontSize="Micro" Grid.Row="0" Grid.Column="0"/>
+						<Label Text="❌" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center"/>
+
+						<Label Text="Breekbaar" FontSize="Micro" Grid.Row="1" Grid.Column="0"/>
+						<Label Text="❌" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center"/>
+
+						<Label Text="Handtekening" FontSize="Micro" Grid.Row="2" Grid.Column="0"/>
+						<Label Text="❌" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center"/>
+
+						<Label Text="Klant moet Id tonen" FontSize="Micro" Grid.Row="3" Grid.Column="0"/>
+						<Label Text="❌" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center"/>
+
+						<Label Text="Gewicht" FontSize="Micro" Grid.Row="4" Grid.Column="0"/>
+						<Label Text="11 gram" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center"/>
+					</Grid>
+				</Border>
+
+				<Picker x:Name="picker"
+				Title="Kies een status">
+					<Picker.ItemsSource>
+						<x:Array Type="{x:Type x:String}">
+							<x:String>Bezorgd</x:String>
+							<x:String>Bij buren bezorgd</x:String>
+							<x:String>Later bezorgd</x:String>
+							<x:String>Naar pakketpunt</x:String>
+							<x:String>Beschadigd</x:String>
+							<x:String>Vermist</x:String>
+							<x:String>Anders</x:String>
+						</x:Array>
+					</Picker.ItemsSource>
+				</Picker>
+
+			</VerticalStackLayout>
+		</ScrollView>
+
+
+		<!-- Onderste navigatie -->
+		<Grid Grid.Row="1"
+            BackgroundColor="LightSlateGrey"
+            Padding="10"
+            ColumnDefinitions="*,*,*">
+
+			<Border Grid.Column="0" StrokeThickness="0">
+				<Border.GestureRecognizers>
+					<TapGestureRecognizer Tapped="HomeTapped"/>
+				</Border.GestureRecognizers>
+
+				<VerticalStackLayout Spacing="0">
+					<VerticalStackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="HomeTapped" NumberOfTapsRequired="1"/>
+					</VerticalStackLayout.GestureRecognizers>
+					<Label Text="🏠"
+                       HorizontalOptions="Center"
+                       FontSize="24"/>
+					<Label Text="Home"
+                         HorizontalOptions="Center"/>
+				</VerticalStackLayout>
+			</Border>
+
+			<Border Grid.Column="1" StrokeThickness="0">
+				<Border.GestureRecognizers>
+					<TapGestureRecognizer Tapped="KaartTapped" NumberOfTapsRequired="1"/>
+				</Border.GestureRecognizers>
+
+				<VerticalStackLayout Spacing="0">
+					<Label Text="🗺️"
+               HorizontalOptions="Center"
+               FontSize="24"/>
+					<Label Text="Kaart"
+           HorizontalOptions="Center"/>
+				</VerticalStackLayout>
+			</Border>
+
+			<Border Grid.Column="2" StrokeThickness="0">
+				<Border.GestureRecognizers>
+					<TapGestureRecognizer Tapped="AdressenTapped" NumberOfTapsRequired="1"/>
+				</Border.GestureRecognizers>
+
+				<VerticalStackLayout Spacing="0">
+					<Label Text="📦"
+           HorizontalOptions="Center"
+           FontSize="24"/>
+					<Label Text="Adressen"
+           HorizontalOptions="Center"/>
+				</VerticalStackLayout>
+			</Border>
+
+		</Grid>
+	</Grid>
+
+</ContentPage>
